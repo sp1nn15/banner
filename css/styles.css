@@ -1,0 +1,291 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  font-family: 'TT Wellingtons';
+  --animation: 0.5s;
+}
+
+.banner {
+  width: 320px;
+  height: 480px;
+  background-color: #FFD749;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner-text_readiness {
+  display: flex;
+  align-items: center;
+  height: 42px;
+  position: absolute;
+  top: 2px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translate3d(0px, -20px, 0px);
+  z-index: -1;
+  transition: var(--animation);
+}
+
+.banner-text_title {
+  font-weight: 900;
+  font-size: 20px;
+  color: #444444;
+  position: relative;
+  top: 2px;
+}
+
+.banner-text_counter {
+  font-weight: 900;
+  font-size: 30px;
+  color: #F8A4A4;
+  -webkit-text-stroke: 1px #454444;
+  margin-left: 11px;
+}
+
+.banner-text_message {
+  position: absolute;
+  top: 278px;
+  left: 190px;
+  background: url(../img/message.png) no-repeat;
+  width: 194px;
+  height: 117px;
+  filter: drop-shadow(0px 15px 15px rgba(80, 80, 80, 0.2));
+  z-index: -1;
+  opacity: 0;
+  transform: rotate(20deg);
+  transition: var(--animation);
+  animation: shake 5s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+}
+
+@keyframes shake {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(0eg); }
+  75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.banner-text_ready {
+  position: absolute;
+  top: 26px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  line-height: 42px;
+  font-weight: 900;
+  font-size: 30px;
+  color: #444444;
+  opacity: 0;
+  z-index: -1;
+  transform: translate3d(0px, -20px, 0px);
+  transition: var(--animation);
+}
+
+.banner_button {
+  position: absolute;
+  bottom: 36px;
+  left: 0;
+  right: 0;
+  width: 189px;
+  height: 51px;
+  background: #FFFFFF;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  font-weight: 900;
+  font-size: 20px;
+  color: #FFD749;
+  -webkit-text-stroke: 1px #000;
+  z-index: 3;
+  animation-name: button;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  opacity: 0;
+  z-index: -1;
+  transition: var(--animation);
+  transform: translate3d(0px, 20px, 0px);
+}
+
+@keyframes button {
+  50% {
+    box-shadow: 0 0 30px #FFD749;
+  }
+}
+
+.backpack {
+  position: absolute;
+  top: 240px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  background: url(../img/backpack.png);
+  width: 266px;
+  height: 349px;
+  transform: rotate(-10.92deg) scale(1.20) translate3d(15px, -151px, 0px);
+  opacity: 0;
+  z-index: -1;
+  transition: var(--animation);
+}
+
+.blick {
+  background: url(../img/blick.png) no-repeat;
+  width: 156px;
+  height: 156px;
+  position: absolute;
+  animation-name: blick;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.35));
+}
+
+.blick_1 {
+  top: -61px;
+  left: 41px;
+}
+
+.blick_2 {
+  top: 134px;
+  left: -35px;
+  animation-delay: 0.2s;
+}
+
+.blick_3 {
+  top: 103px;
+  right: -66px;
+  animation-delay: 0.4s;
+}
+
+@keyframes blick {
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.list {
+  list-style: none;
+}
+
+.item {
+  cursor: pointer;
+  z-index: -1;
+  opacity: 0;
+  transform: scale(0.8);
+  position: absolute;
+  transition: var(--animation);
+}
+
+.list.anim .item {
+  animation-name: item;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+.item:hover {
+  animation-play-state: paused;
+}
+
+@keyframes item {
+  50% {
+    transform: scale(0.9);
+  }
+}
+
+.item_1 {
+  width: 126px;
+  height: 58px;
+  top: 65px;
+  left: 40px;
+}
+
+.item_2 {
+  width: 58px;
+  height: 94px;
+  top: 37px;
+  right: 52px;
+}
+
+.item_3 {
+  width: 62px;
+  height: 88px;
+  top: 127px;
+  left: 72px;
+}
+
+.item_4 {
+  width: 80px;
+  height: 94px;
+  top: 139px;
+  right: 34px;
+}
+
+.item_5 {
+  width: 48px;
+  height: 77px;
+  top: 176px;
+  left: 43px;
+}
+
+.item:after {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.item_1:after {
+  transform: rotate(-12.21deg);
+  background-image: url(../img/nintendo.png);
+  content: '';
+}
+
+.item_2:after {
+  transform: rotate(92.72deg);
+  background-image: url(../img/karandash.png);
+  content: '';
+}
+
+.item_3:after {
+  transform: rotate(55.68deg);
+  background-image: url(../img/usb.png);
+  content: '';
+}
+
+.item_4:after {
+  transform: rotate(40.82deg);
+  background-image: url(../img/tetrad.png);
+  content: '';
+}
+
+.item_5:after {
+  transform: rotate(87.55deg);
+  background-image: url(../img/pencil.png);
+  content: '';
+}
+
+.item.active {
+  opacity: 0.20 !important;
+   animation-play-state: paused;
+}
+
+.list.no-active .item {
+  opacity: 0 !important;
+  z-index: -1 !important;
+  transition: none !important;
+}
+
+.banner_button:hover {
+   animation-play-state: paused;
+}
